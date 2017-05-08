@@ -171,6 +171,9 @@
 
 # fizz_buzz(100)
 
+
+
+
 # hashes are only used for storing data , example cant call fizz_buzz in the hash
 
 # :hello is a symbol 
@@ -197,14 +200,56 @@
 # ^^^ creates new key value pair on the fly ^^^
 
 
-house_words = ["Lannister", "Hear Me Roar!"]
+# house_words = ["Lannister", "Hear Me Roar!"]
 
-house_hash = {}
+# house_hash = {}
 
-house_hash[house_words[0]] = house_words[1].to_sym
+# house_hash[house_words[0]] = house_words[1].to_sym
 
-puts house_hash[:Lannister]
-puts house_hash
+# puts house_hash[:Lannister]
+# puts house_hash
+
+
+
+# exec($0)  to refresh your irb in ruby
+
+# [3:23] 
+# if that doesnt work do
+
+# [3:23] 
+# CTRL+L or system("clear") or system("reset")
+
+
+# OBJECT!!
+
+class Bike
+
+	attr_accessor :wheels, :brand, :color
+	# attr_reader :wheels, :brand, :color
+	# attr_writer :color
+
+	def initialize(brand, color)
+		@brand = brand
+		@color = color
+		@wheels = 4
+	end
+
+	def add_training_wheels
+		@wheels += 2 if @wheels == 4
+	end
+
+end
+
+# cruiser = Bike.new(4, "Schwinn", "Red")
+# cruiser.wheels
+# cruiser.brand
+# cruiser.color
+
+
+
+
+
+
 
 
 
