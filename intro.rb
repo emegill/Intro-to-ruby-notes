@@ -211,34 +211,26 @@
 
 
 
-# exec($0)  to refresh your irb in ruby
-
-# [3:23] 
-# if that doesnt work do
-
-# [3:23] 
-# CTRL+L or system("clear") or system("reset")
-
 
 # OBJECT!!
 
-class Bike
+# class Bike
 
-	attr_accessor :wheels, :brand, :color
-	# attr_reader :wheels, :brand, :color
-	# attr_writer :color
+# 	attr_accessor :wheels, :brand, :color
+# 	# attr_reader :wheels, :brand, :color
+# 	# attr_writer :color
 
-	def initialize(brand, color)
-		@brand = brand
-		@color = color
-		@wheels = 4
-	end
+# 	def initialize(brand, color)
+# 		@brand = brand
+# 		@color = color
+# 		@wheels = 4
+# 	end
 
-	def add_training_wheels
-		@wheels += 2 if @wheels == 4
-	end
+# 	def add_training_wheels
+# 		@wheels += 2 if @wheels == 4
+# 	end
 
-end
+# end
 
 # cruiser = Bike.new(4, "Schwinn", "Red")
 # cruiser.wheels
@@ -247,6 +239,52 @@ end
 
 
 
+
+class Animal
+
+	attr_reader :name, :multicellular, :sentience, :nervous_system
+
+	def create
+		@multicellular = true
+		@sentience = true
+		@nervous_system = true
+	end
+
+end
+
+class Mammal < Animal
+
+	attr_accessor :blood, :name
+
+	def initialize(name)
+		@name = name
+		@blood = "warm"
+		create
+		# super
+	end
+
+end
+
+class GrossBug < Animal
+
+	def initialize(name)
+		@name = name
+		@gross = true
+		create
+end
+
+class Arachnid < GrossBug
+
+	attr_reader :legs
+
+	def initialize(name)
+		@legs = 8
+		super
+
+	end
+
+# tiger = Mammal.new("Tiger")
+# tiger.name
 
 
 
