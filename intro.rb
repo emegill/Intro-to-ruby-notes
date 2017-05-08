@@ -152,24 +152,60 @@
 #   end
 # end
 
-def fizz_buzz(amount)
+# def fizz_buzz(amount)
 	
-	(1..amount).each do |i|
-		fizzy = ""
+# 	(1..amount).each do |i|
+# 		fizzy = ""
 
-		fizzy << "fizz" if i % 3 == 0
+# 		fizzy << "fizz" if i % 3 == 0
 
-		fizzy << "buzz" if i % 5 == 0
+# 		fizzy << "buzz" if i % 5 == 0
 	
-		if fizzy == ""
-			puts i
-		else
-			puts fizzy
-		end
-	end
-end
+# 		if fizzy == ""
+# 			puts i
+# 		else
+# 			puts fizzy
+# 		end
+# 	end
+# end
 
-fizz_buzz(100)
+# fizz_buzz(100)
+
+# hashes are only used for storing data , example cant call fizz_buzz in the hash
+
+# :hello is a symbol 
+# Hash is not an object!
+
+# chris = {
+# 	name: "Chris",
+# 	occupation: "Teacher",
+# 	hair: "Brown"
+# }
+
+# same thing 
+
+# chris = {:name => "Chris", :occupation => "Teacher", :hair => "Brown"}
+
+# ^^^^ old way to do it but still used. ^^^^
+
+# chris[:name]    
+
+# ^^^ pulls out chris var ^^^ from hash
+
+# chris[:eye_color] = "green"
+
+# ^^^ creates new key value pair on the fly ^^^
+
+
+house_words = ["Lannister", "Hear Me Roar!"]
+
+house_hash = {}
+
+house_hash[house_words[0]] = house_words[1].to_sym
+
+puts house_hash[:Lannister]
+puts house_hash
+
 
 
 
