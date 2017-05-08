@@ -28,7 +28,7 @@
 
 
 
-# loops 
+# LOOPS
 
 # friends =  ["Sinead", "Aidan", "Grace", "Rich"]
 
@@ -82,16 +82,16 @@
 
 # Create a method that takes a string as an argument and adds the phrase “Only in America!” to the end of it
 
-def american_string(string)
-	puts string + " only in america"
-end
+# def american_string(string)
+# 	puts string + " only in america"
+# end
 
-american_string("hotdog")
+# american_string("hotdog")
 
 
 # Create a method to find the maximum value in an array of numbers. For instance: [100,10,-1000] should return 100. Do not use Ruby’s built-in .max method
 
-array = [3,7,2,4,6,1,8,5]
+# array = [3,7,2,4,6,1,8,5]
 
 # def math_method(array)
 # 	# array = [3,7,2,4,6,1,8,5]
@@ -100,19 +100,77 @@ array = [3,7,2,4,6,1,8,5]
 
 # math_method(array)
 
+# def max_num(nums)
+# 	max = nums[0]
+# 	nums.each do |num|
+# 		if num > max
+# 			max = num
+# 		end
+# 	end
+# 	puts max 
+# end
+
+# max_num(array)
 
 
-def max_num(nums)
-	max = nums[0]
-	nums.each do |num|
-		if num > max
-			max = num
+
+# STRING CAT
+
+# "<<"  is basically +=
+
+# def america(string)
+# 	string << " only in America!"
+# 	puts string
+# end
+
+# nums =[43, 1, 5, 230, 124]
+
+# def max_num(array)
+# 	# puts nums.max
+# 	# print array.sort
+# 	puts array.sort.last
+# end 
+
+# max_num(nums)
+
+
+# Create a method that prints the numbers from 1 to 100, except:
+
+# For multiples of three print “Fizz” instead of the number
+# For multiples of five print “Buzz”
+# Print “FizzBuzz” for numbers that are multiples of both 3 and 5.
+
+# 1.upto(100) do |i|
+#   if i % 5 == 0 and i % 3 == 0
+#     puts "FizzBuzz"
+#   elsif i % 5 == 0
+#     puts "Buzz"
+#   elsif i % 3 == 0
+#     puts "Fizz"
+#   else
+#     puts i
+#   end
+# end
+
+def fizz_buzz(amount)
+	
+	(1..amount).each do |i|
+		fizzy = ""
+
+		fizzy << "fizz" if i % 3 == 0
+
+		fizzy << "buzz" if i % 5 == 0
+	
+		if fizzy == ""
+			puts i
+		else
+			puts fizzy
 		end
 	end
-	puts max 
 end
 
-max_num(array)
+fizz_buzz(100)
+
 
 
 
