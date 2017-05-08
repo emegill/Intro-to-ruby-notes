@@ -82,8 +82,6 @@
 
 # Create a method that takes a string as an argument and adds the phrase “Only in America!” to the end of it
 
-# Create a method to find the maximum value in an array of numbers. For instance: [100,10,-1000] should return 100. Do not use Ruby’s built-in .max method
-
 def american_string(string)
 	puts string + " only in america"
 end
@@ -91,10 +89,32 @@ end
 american_string("hotdog")
 
 
-def math_method
+# Create a method to find the maximum value in an array of numbers. For instance: [100,10,-1000] should return 100. Do not use Ruby’s built-in .max method
+
 array = [3,7,2,4,6,1,8,5]
-puts array.sort.last
+
+# def math_method(array)
+# 	# array = [3,7,2,4,6,1,8,5]
+# 	puts array.sort.last
+# end
+
+# math_method(array)
+
+
+
+def max_num(nums)
+	max = nums[0]
+	nums.each do |num|
+		if num > max
+			max = num
+		end
+	end
+	puts max 
 end
+
+max_num(array)
+
+
 
 
 
